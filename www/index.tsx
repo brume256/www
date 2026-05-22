@@ -6,12 +6,13 @@ import "@hazae41/symbol-dispose-polyfill";
 
 import "@hazae41/disposable-stack-polyfill";
 
+import { ClientContext } from "@/libs/client/mod.tsx";
 import { dirs, Lang } from "@/libs/lang/mod.ts";
 import { App } from "@/mods/app/mod.tsx";
 import { PathProvider, useHashPath } from "@hazae41/chemin";
 import { immutable } from "@hazae41/immutable";
 import { Rewind } from "@hazae41/rewind";
-import React, { ReactNode, useEffect } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import { hydrateRoot } from "react-dom/client";
 
 React;
@@ -53,22 +54,26 @@ async function register() {
 function Body() {
   const path = useHashPath()
 
+  const [client, setClient] = useState(false)
+
   useEffect(() => {
     const lang = Lang.get()
 
     document.documentElement.lang = lang
     document.documentElement.dir = dirs[lang]
 
-    return
+    setClient(true)
   }, [])
 
   useEffect(() => {
     register().then(console.log).catch(console.error)
   }, [])
 
-  return <PathProvider value={path}>
-    <App />
-  </PathProvider>
+  return <ClientContext.Provider value={client}>
+    <PathProvider value={path}>
+      <App />
+    </PathProvider>
+  </ClientContext.Provider>
 }
 
 // @ts-ignore: process not found

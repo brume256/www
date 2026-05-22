@@ -1,4 +1,5 @@
 import { AnchorChip } from "@/libs/anchors/mod.tsx";
+import { useClientContext } from "@/libs/client/mod.tsx";
 import { Lang } from "@/libs/lang/mod.ts";
 import { useAnchorWithCoords, usePathContext } from "@hazae41/chemin";
 import { PathBoard } from "@hazae41/modal";
@@ -16,10 +17,12 @@ async function loop(callback: () => Promise<void>, signal: AbortSignal) {
 }
 
 export function App() {
-  const [closed, setClosed] = useState(false)
+  const client = useClientContext().getOrNull()
 
   const path = usePathContext().getOrThrow()
   const apps = useAnchorWithCoords(path, "/apps")
+
+  const [closed, setClosed] = useState(false)
 
   useEffect(() => {
     const aborter = new AbortController()
@@ -35,7 +38,7 @@ export function App() {
   }, [])
 
   return <Fragment>
-    {path.url.pathname === "/apps" &&
+    {client && path.url.pathname === "/apps" &&
       <PathBoard>
         <AppsBoard />
       </PathBoard>}
