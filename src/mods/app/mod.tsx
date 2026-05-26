@@ -62,13 +62,6 @@ export function App() {
           <div className="h-4 shrink-0" />
           <div className="flex flex-wrap gap-2">
             <AnchorChip
-              href="https://pump.fun/coin/ChtH5GxPAWqFXLYuhrqy82viuMxeWBsvJXcCahT7pump"
-              rel="noreferrer"
-              target="_blank"
-              dir="ltr">
-              🔥 PUMPFUN
-            </AnchorChip>
-            <AnchorChip
               onClick={apps.onClick}
               onKeyDown={apps.onKeyDown}
               href={apps.url.hash}
@@ -76,6 +69,13 @@ export function App() {
               target="_blank"
               dir="ltr">
               Apps
+            </AnchorChip>
+            <AnchorChip
+              href="https://pump.fun/coin/ChtH5GxPAWqFXLYuhrqy82viuMxeWBsvJXcCahT7pump"
+              rel="noreferrer"
+              target="_blank"
+              dir="ltr">
+              PUMPFUN
             </AnchorChip>
             <AnchorChip
               href="https://dexscreener.com/ethereum/0xD0EbFe04Adb5Ef449Ec5874e450810501DC53ED5"
