@@ -86,7 +86,7 @@ export function App() {
               Tokens
             </AnchorChip>
             <AnchorChip
-              href="https://x.com/i/communities/1687556820900999168"
+              href="https://x.com/BrumeProject"
               rel="noreferrer"
               target="_blank"
               dir="ltr">
