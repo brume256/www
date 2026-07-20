@@ -131,7 +131,7 @@ export function AppsBoard() {
         href="https://wallet.brume.tech" />
       <AnchorRow disabled
         icon="/appicon.png"
-        title="Brume Link"
+        title="Brume Click"
         subtitle={Lang.match({ en: "One-click wallet login", zh: "一键钱包登录", hi: "एक-क्लिक वॉलेट लॉगिन", es: "Inicio de sesión en billetera con un clic", ar: "تسجيل الدخول إلى المحفظة بنقرة واحدة", fr: "Connexion au portefeuille en un clic", de: "Ein-Klick-Wallet-Anmeldung", ru: "Вход в кошелек одним кликом", pt: "Login de carteira com um clique", ja: "ワンクリックウォレットログイン", pa: "ਇੱਕ-ਕਲਿੱਕ ਵਾਲਿਟ ਲੌਗਇਨ", bn: "এক-ক্লিক ওয়ালেট লগইন", id: "Login dompet dengan satu klik", ur: "ون کلک والیٹ لاگ ان", ms: "Log masuk dompet dengan satu klik", it: "Accesso al portafoglio con un clic", tr: "Tek tıklamayla cüzdan girişi", ta: "ஒரு கிளிக் வாலெட் லாகின்", te: "ఒక క్లిక్ వాలెట్ లాగిన్", ko: "원클릭 지갑 로그인", vi: "Đăng nhập ví một lần nhấp", pl: "Logowanie do portfela jednym kliknięciem", ro: "Autentificare în portofel cu un clic", nl: "Eenmalige portemonnee-login", el: "Σύνδεση πορτοφολιού με ένα κλικ", th: "เข้าสู่ระบบกระเป๋าเงินด้วยคลิกเดียว", cs: "Přihlášení do peněženky jedním kliknutím", hu: "Egykattintásos pénztárca bejelentkezés", sv: "Enklicks plånboksinloggning", da: "Én-klik-tegnebog login" })} />
       <AnchorRow disabled
         icon="/appicon.png"
