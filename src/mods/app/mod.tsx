@@ -170,12 +170,17 @@ export function TokensBoard() {
     <div className="flex flex-col gap-4">
       <AnchorRow
         icon="/assets/pumpfun.png"
-        title="Pump.fun"
+        title="Pumpfun October 2026"
+        subtitle="Solana"
+        href="https://pump.fun/coin/AJPertGGMDmM75fb6jiB8MPfFu61ouLDtW6UBvf3pump" />
+      <AnchorRow
+        icon="/assets/pumpfun.png"
+        title="Pumpfun May 2026"
         subtitle="Solana"
         href="https://pump.fun/coin/ChtH5GxPAWqFXLYuhrqy82viuMxeWBsvJXcCahT7pump" />
       <AnchorRow
         icon="/assets/bags.png"
-        title="Bags.fm"
+        title="Bags"
         subtitle="Solana"
         href="https://bags.fm/BnZnZe7dr59r9PrUZnwdhC9fEkD6UHnsZZur7xkyBAGS" />
     </div>
