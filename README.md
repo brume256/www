@@ -23,7 +23,7 @@ npm install -g deno
 Clone this repository
 
 ```bash
-git clone https://github.com/brumeproject/www.git && cd ./starter && rm -rf ./.git && git init
+git clone https://github.com/brume256/www.git && cd ./starter && rm -rf ./.git && git init
 ```
 
 Install
@@ -66,13 +66,11 @@ npm install -g deno && deno install
 deno task develop
 ```
 
-
 - Test
 
 ```bash
 deno task examine
 ```
-
 
 - Build
 

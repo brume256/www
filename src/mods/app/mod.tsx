@@ -100,7 +100,7 @@ export function App() {
               {Lang.match({ en: "Socials", zh: "社交", hi: "सोशल्स", es: "Redes sociales", ar: "وسائل التواصل الاجتماعي", fr: "Réseaux sociaux", de: "Soziale Netzwerke", ru: "Социальные сети", pt: "Redes sociais", ja: "ソーシャルメディア", pa: "ਸੋਸ਼ਲਜ਼", bn: "সামাজিক মাধ্যম", id: "Media sosial", ur: "سوشل میڈیا", ms: "Media sosial", it: "Social media", tr: "Sosyal medya", ta: "சமூக ஊடகம்", te: "సోషల్ మీడియా", ko: "소셜 미디어", vi: "Mạng xã hội", pl: "Media społecznościowe", ro: "Rețele sociale", nl: "Sociale media", el: "Κοινωνικά δίκτυα", th: "โซเชียลมีเดีย", cs: "Sociální sítě", hu: "Közösségi média", sv: "Sociala medier", da: "Sociale medier" })}
             </AnchorChip>
             <AnchorChip
-              href="https://github.com/brumeproject"
+              href="https://github.com/brume256"
               rel="noreferrer"
               target="_blank"
               dir="ltr">
@@ -193,7 +193,7 @@ export function SocialsBoard() {
         icon="/assets/twitter.svg"
         title={Lang.match({ en: "X profile", zh: "X个人资料", hi: "X प्रोफ़ाइल", es: "Perfil de X", ar: "ملف X الشخصي", fr: "Profil X", de: "X-Profil", ru: "Профиль X", pt: "Perfil X", ja: "Xプロフィール", pa: "X ਪ੍ਰੋਫ਼ਾਈਲ", bn: "এক্স প্রোফাইল", id: "Profil X", ur: "ایکس پروفائل", ms: "Profil X", it: "Profilo X", tr: "X profili", ta: "X சுயவிவரம்", te: "X ప్రొఫైల్", ko: "X 프로필", vi: "Hồ sơ X", pl: "Profil X", ro: "Profilul X", nl: "X-profiel", el: "Προφίλ X", th: "โปรไฟล์ X", cs: "Profil X", hu: "X profilja", sv: "X-profilen", da: "X-profil" })}
         subtitle={Lang.match({ en: "Follow us on X", zh: "在X上关注我们", hi: "हमें X पर फॉलो करें", es: "Síguenos en X", ar: "تابعنا على X", fr: "Suivez-nous sur X", de: "Folgen Sie uns auf X", ru: "Подписывайтесь на нас в X", pt: "Siga-nos no X", ja: "Xでフォローしてください", pa: "ਸਾਨੂੰ X 'ਤੇ ਫਾਲੋ ਕਰੋ", bn: "আমাদের এক্স-এ অনুসরণ করুন", id: "Ikuti kami di X", ur: "ہمیں ایکس پر فالو کریں", ms: "Ikuti kami di X", it: "Seguici su X", tr: "Bizi X'te takip edin", ta: "எங்களை X இல் பின்தொடருங்கள்", te: "మమ్మల్ని X లో ఫాలో చేయండి", ko: "X에서 팔로우하세요", vi: "Theo dõi chúng tôi trên X", pl: "Śledź nas na X", ro: "Urmărește-ne pe X", nl: "Volg ons op X", el: "Ακολουθήστε μας στο Χ", th: "ติดตามเราบน X", cs: "Sledujte nás na X", hu: "Kövess minket az X-en", sv: "Följ oss på X", da: "Følg os på X" })}
-        href="https://x.com/BrumeProject" />
+        href="https://x.com/brume256" />
       <AnchorRow
         icon="/assets/twitter.svg"
         title={Lang.match({ en: "X community", zh: "X社区", hi: "X समुदाय", es: "Comunidad de X", ar: "مجتمع X", fr: "Communauté X", de: "X-Community", ru: "Сообщество X", pt: "Comunidade X", ja: "Xコミュニティ", pa: "X ਕਮਿਊਨਿਟੀ", bn: "এক্স কমিউনিটি", id: "Komunitas X", ur: "ایکس کمیونٹی", ms: "Komuniti X", it: "Comunità X", tr: "X topluluğu", ta: "X சமூகத்தைச் சேர்ந்துகொள்ளுங்கள்", te: "X కమ్యూనిటీకి చేరండి", ko: "X 커뮤니티", vi: "Cộng đồng X", pl: "Społeczność X", ro: "Comunitatea X", nl: "X-community", el: "Κοινότητα Χ", th: "ชุมชน X", cs: "Komunita X", hu: "X közösség", sv: "X-community", da: "X-fællesskab" })}
