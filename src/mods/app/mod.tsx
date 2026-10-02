@@ -154,8 +154,8 @@ export function TokensBoard() {
     <div className="flex flex-col gap-4">
       <AnchorRow
         icon="/assets/uniswap.png"
-        title="Uniswap"
-        subtitle="Ethereum"
+        title="Brume (BRUME)"
+        subtitle="Uniswap • Ethereum • October 2024"
         href="https://dexscreener.com/ethereum/0xD0EbFe04Adb5Ef449Ec5874e450810501DC53ED5" />
     </div>
     <div className="h-6" />
@@ -170,18 +170,20 @@ export function TokensBoard() {
     <div className="flex flex-col gap-4">
       <AnchorRow
         icon="/assets/pumpfun.png"
-        title="Pumpfun October 2026"
-        subtitle="Solana"
+        title="Brume (BRUME)"
+        subtitle="Pumpfun • Solana • October 2026"
         href="https://pump.fun/coin/AJPertGGMDmM75fb6jiB8MPfFu61ouLDtW6UBvf3pump" />
       <AnchorRow
+        deprecated
         icon="/assets/pumpfun.png"
-        title="Pumpfun May 2026"
-        subtitle="Solana"
+        title="Brume (BRUME)"
+        subtitle="Pumpfun • Solana • May 2026"
         href="https://pump.fun/coin/ChtH5GxPAWqFXLYuhrqy82viuMxeWBsvJXcCahT7pump" />
       <AnchorRow
+        deprecated
         icon="/assets/bags.png"
-        title="Bags"
-        subtitle="Solana"
+        title="Brume (BRUME)"
+        subtitle="Bags • Solana • January 2026"
         href="https://bags.fm/BnZnZe7dr59r9PrUZnwdhC9fEkD6UHnsZZur7xkyBAGS" />
     </div>
   </div>
@@ -200,11 +202,6 @@ export function SocialsBoard() {
         subtitle={Lang.match({ en: "Follow us on X", zh: "在X上关注我们", hi: "हमें X पर फॉलो करें", es: "Síguenos en X", ar: "تابعنا على X", fr: "Suivez-nous sur X", de: "Folgen Sie uns auf X", ru: "Подписывайтесь на нас в X", pt: "Siga-nos no X", ja: "Xでフォローしてください", pa: "ਸਾਨੂੰ X 'ਤੇ ਫਾਲੋ ਕਰੋ", bn: "আমাদের এক্স-এ অনুসরণ করুন", id: "Ikuti kami di X", ur: "ہمیں ایکس پر فالو کریں", ms: "Ikuti kami di X", it: "Seguici su X", tr: "Bizi X'te takip edin", ta: "எங்களை X இல் பின்தொடருங்கள்", te: "మమ్మల్ని X లో ఫాలో చేయండి", ko: "X에서 팔로우하세요", vi: "Theo dõi chúng tôi trên X", pl: "Śledź nas na X", ro: "Urmărește-ne pe X", nl: "Volg ons op X", el: "Ακολουθήστε μας στο Χ", th: "ติดตามเราบน X", cs: "Sledujte nás na X", hu: "Kövess minket az X-en", sv: "Följ oss på X", da: "Følg os på X" })}
         href="https://x.com/brume256" />
       <AnchorRow
-        icon="/assets/twitter.svg"
-        title={Lang.match({ en: "X community", zh: "X社区", hi: "X समुदाय", es: "Comunidad de X", ar: "مجتمع X", fr: "Communauté X", de: "X-Community", ru: "Сообщество X", pt: "Comunidade X", ja: "Xコミュニティ", pa: "X ਕਮਿਊਨਿਟੀ", bn: "এক্স কমিউনিটি", id: "Komunitas X", ur: "ایکس کمیونٹی", ms: "Komuniti X", it: "Comunità X", tr: "X topluluğu", ta: "X சமூகத்தைச் சேர்ந்துகொள்ளுங்கள்", te: "X కమ్యూనిటీకి చేరండి", ko: "X 커뮤니티", vi: "Cộng đồng X", pl: "Społeczność X", ro: "Comunitatea X", nl: "X-community", el: "Κοινότητα Χ", th: "ชุมชน X", cs: "Komunita X", hu: "X közösség", sv: "X-community", da: "X-fællesskab" })}
-        subtitle={Lang.match({ en: "Join our X community", zh: "加入我们的X社区", hi: "हमारे X समुदाय में शामिल हों", es: "Únete a nuestra comunidad de X", ar: "انضم إلى مجتمعنا على X", fr: "Rejoignez notre communauté X", de: "Treten Sie unserer X-Community bei", ru: "Присоединяйтесь к нашему сообществу X", pt: "Junte-se à nossa comunidade X", ja: "私たちのXコミュニティに参加してください", pa: "ਸਾਡੇ X ਕਮਿਊਨਿਟੀ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ", bn: "আমাদের এক্স কমিউনিটিতে যোগ দিন", id: "Bergabunglah dengan komunitas X kami", ur: "ہمارے ایکس کمیونٹی میں شامل ہوں", ms: "Sertai komuniti X kami", it: "Unisciti alla nostra comunità X", tr: "X topluluğumuza katılın", ta: "எங்கள் X சமூகத்தில் சேருங்கள்", te: "మా X కమ్యూనిటీకి చేరండి", ko: "우리의 X 커뮤니티에 가입하세요", vi: "Tham gia cộng đồng X của chúng tôi", pl: "Dołącz do naszej społeczności X", ro: "Alăturați-vă comunității noastre X", nl: "Word lid van onze X-community", el: "Ελάτε στην κοινότητά μας στο Χ", th: "เข้าร่วมชุมชน X ของเรา", cs: "Připojte se k naší komunitě X", hu: "Csatlakozzon az X közösségünkhöz", sv: "Gå med i vårt X-community", da: "Deltag i vores X-fællesskab" })}
-        href="https://x.com/i/communities/1687556820900999168" />
-      <AnchorRow
         icon="/assets/discord.svg"
         title={Lang.match({ en: "Discord server", zh: "Discord服务器", hi: "Discord सर्वर", es: "Servidor de Discord", ar: "خادم Discord", fr: "Serveur Discord", de: "Discord-Server", ru: "Сервер Discord", pt: "Servidor Discord", ja: "Discordサーバー", pa: "Discord ਸਰਵਰ", bn: "ডিসকর্ড সার্ভার", id: "Server Discord", ur: "ڈسکارڈ سرور", ms: "Server Discord", it: "Server Discord", tr: "Discord sunucusu", ta: "Discord சேவையகம்", te: "డిస్కార్డ్ సర్వర్", ko: "디스코드 서버", vi: "Máy chủ Discord", pl: "Serwer Discord", ro: "Serverul Discord", nl: "Discord-server", el: "Διακομιστής Discord", th: "เซิร์ฟเวอร์ Discord", cs: "Server Discord", hu: "Discord szerver", sv: "Discord-server", da: "Discord-server" })}
         subtitle={Lang.match({ en: "Talk on our Discord server", zh: "在我们的Discord服务器上聊天", hi: "हमारे Discord सर्वर पर बात करें", es: "Habla en nuestro servidor de Discord", ar: "تحدث على خادم Discord الخاص بنا", fr: "Discutez sur notre serveur Discord", de: "Sprechen Sie auf unserem Discord-Server", ru: "Общайтесь на нашем сервере Discord", pt: "Converse em nosso servidor Discord", ja: "私たちのDiscordサーバーで話す", pa: "ਸਾਡੇ Discord ਸਰਵਰ 'ਤੇ ਗੱਲ ਕਰੋ", bn: "আমাদের ডিসকর্ড সার্ভারে কথা বলুন", id: "Bicaralah di server Discord kami", ur: "ہمارے ڈسکارڈ سرور پر بات کریں", ms: "Bercakap di pelayan Discord kami", it: "Parla sul nostro server Discord", tr: "Discord sunucumuzda konuşun", ta: "எங்கள் Discord சேவையகத்தில் பேசுங்கள்", te: "మా డిస్కార్డ్ సర్వర్‌లో మాట్లాడండి", ko: "우리의 Discord 서버에서 이야기하세요", vi: "Nói chuyện trên máy chủ Discord của chúng tôi", pl: "Rozmawiaj na naszym serwerze Discord", ro: "Vorbește pe serverul nostru Discord", nl: "Praat op onze Discord-server", el: "Μιλήστε στον διακομιστή μας στο Discord", th: "พูดคุยบนเซิร์ฟเวอร์ Discord ของเรา", cs: "Mluvte na našem serveru Discord", hu: "Beszélj a mi Discord szerverünkön", sv: "Prata på vår Discord-server", da: "Tal på vores Discord-server" })}
@@ -213,11 +210,12 @@ export function SocialsBoard() {
   </div>
 }
 
-export function AnchorRow(props: { title: string } & { subtitle: string } & { icon: string } & { href?: string } & { disabled?: boolean }) {
-  const { title, subtitle, icon, href, disabled } = props
+export function AnchorRow(props: { title: string } & { subtitle: string } & { icon: string } & { href?: string } & { disabled?: boolean } & { deprecated?: boolean }) {
+  const { title, subtitle, icon, href, disabled, deprecated } = props
 
-  return <a className="p-6 bg-default-contrast rounded-xl flex items-center gap-4 aria-disabled:opacity-50 not-aria-disabled:hover:bg-default-double-contrast focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-default-contrast transition-transform"
+  return <a className="p-6 bg-default-contrast rounded-xl flex items-center gap-4 aria-disabled:opacity-50 data-deprecated:opacity-50 not-aria-disabled:hover:bg-default-double-contrast focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-default-contrast transition-transform"
     aria-disabled={disabled}
+    data-deprecated={deprecated}
     href={href}
     rel="noreferrer"
     target="_blank">
