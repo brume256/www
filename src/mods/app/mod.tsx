@@ -1,5 +1,5 @@
 import { AnchorChip } from "@/libs/anchors/mod.tsx";
-import { useClientContext } from "@/libs/client/mod.tsx";
+import { Client } from "@/libs/client/mod.tsx";
 import { Lang } from "@/libs/lang/mod.ts";
 import { useAnchorWithCoords, usePathContext } from "@hazae41/chemin";
 import { PathBoard } from "@hazae41/modal";
@@ -17,8 +17,6 @@ async function loop(callback: () => Promise<void>, signal: AbortSignal) {
 }
 
 export function App() {
-  const client = useClientContext().getOrNull()
-
   const path = usePathContext().getOrThrow()
 
   const apps = useAnchorWithCoords(path, "/apps")
@@ -41,19 +39,21 @@ export function App() {
   }, [])
 
   return <Fragment>
-    {client && path.url.pathname === "/apps" &&
-      <PathBoard>
-        <AppsBoard />
-      </PathBoard>}
-    {client && path.url.pathname === "/tokens" &&
-      <PathBoard>
-        <TokensBoard />
-      </PathBoard>}
-    {client && path.url.pathname === "/socials" &&
-      <PathBoard>
-        <SocialsBoard />
-      </PathBoard>}
-    <div className="p-safe h-full w-full flex flex-col overflow-y-scroll animate-opacity-in">
+    <Client>
+      {path.url.pathname === "/apps" &&
+        <PathBoard>
+          <AppsBoard />
+        </PathBoard>}
+      {path.url.pathname === "/tokens" &&
+        <PathBoard>
+          <TokensBoard />
+        </PathBoard>}
+      {path.url.pathname === "/socials" &&
+        <PathBoard>
+          <SocialsBoard />
+        </PathBoard>}
+    </Client>
+    <div className="h-full w-full p-safe flex flex-col">
       <div className="grow flex flex-col w-full p-8">
         <div className="grow flex flex-col justify-center items-center">
           <div className="text-default-contrast whitespace-pre-wrap font-[monospace] text-[min(1vw,1vh)] leading-[min(1vw,1vh)]"

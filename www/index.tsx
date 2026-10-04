@@ -8,7 +8,7 @@ import "@hazae41/disposable-stack-polyfill";
 
 import "@hazae41/request-idle-callback-polyfill";
 
-import { ClientContext } from "@/libs/client/mod.tsx";
+import { ClientProvider } from "@/libs/client/mod.tsx";
 import { dirs, Lang } from "@/libs/lang/mod.ts";
 import { App } from "@/mods/app/mod.tsx";
 import { PathProvider, useHashPath } from "@hazae41/chemin";
@@ -28,6 +28,8 @@ async function register() {
     if (active == null)
       return
     if (installing == null)
+      return
+    if (installing.scriptURL === active.scriptURL)
       return
 
     installing.addEventListener("statechange", async () => {
@@ -71,11 +73,14 @@ function Body() {
     register().then(console.log).catch(console.error)
   }, [])
 
-  return <ClientContext.Provider value={client}>
+  return <ClientProvider value={client}>
     <PathProvider value={path}>
-      <App />
+      <div className="h-full w-full overflow-y-auto opacity-0 data-[client=true]:opacity-100 data-[client=true]:animate-opacity-in"
+        data-client={client}>
+        <App />
+      </div>
     </PathProvider>
-  </ClientContext.Provider>
+  </ClientProvider>
 }
 
 // @ts-ignore: process not found
