@@ -44,69 +44,59 @@ export function App() {
         <PathBoard>
           <AppsBoard />
         </PathBoard>}
-      {path.url.pathname === "/tokens" &&
-        <PathBoard>
-          <TokensBoard />
-        </PathBoard>}
       {path.url.pathname === "/socials" &&
         <PathBoard>
           <SocialsBoard />
         </PathBoard>}
+      {path.url.pathname === "/tokens" &&
+        <PathBoard>
+          <TokensBoard />
+        </PathBoard>}
     </Client>
     <div className="h-full w-full p-safe flex flex-col">
-      <div className="grow flex flex-col w-full p-8">
-        <div className="grow flex flex-col justify-center items-center">
-          <div className="text-default-contrast whitespace-pre-wrap font-[monospace] text-[min(1vw,1vh)] leading-[min(1vw,1vh)]"
-            dir="ltr">
-            {closed ? ascii.closed : ascii.open}
-          </div>
+      <div className="grow flex flex-col justify-center items-center py-4">
+        <div className="text-default-contrast whitespace-pre-wrap font-[monospace] text-[min(1svw,1svh)] leading-[min(1svw,1svh)]"
+          dir="ltr">
+          {closed ? ascii.closed : ascii.open}
+        </div>
+      </div>
+      <div className="flex flex-col w-full max-w-6xl m-auto p-8">
+        <div className="font-medium text-6xl">
+          Brume
+        </div>
+        <div className="h-2 shrink-0" />
+        <div className="text-default-contrast text-2xl">
+          {Lang.match({ en: "Technologies to hide yourself in plain sight", zh: "在明处隐藏自己的技术", hi: "सामने छुपने के लिए तकनीक", es: "Tecnologías para esconderse a plena vista", ar: "تقنيات لإخفاء نفسك في الوضوح", fr: "Technologies pour vous cacher à la vue de tous", de: "Technologien, um sich offen zu verstecken", ru: "Технологии, чтобы скрыться на виду", pt: "Tecnologias para se esconder à vista de todos", ja: "目立たないように自分を隠すための技術", pa: "ਸਾਫ ਦਿਖਾਈ ਵਿੱਚ ਆਪਣੇ ਆਪ ਨੂੰ ਛੁਪਾਉਣ ਲਈ ਤਕਨੀਕ", bn: "প্রকাশে নিজেকে লুকানোর প্রযুক্তি", id: "Teknologi untuk menyembunyikan diri di depan umum", ur: "صاف دکھائی میں خود کو چھپانے کی تکنیک", ms: "Teknologi untuk menyembunyikan diri di tempat terang", it: "Tecnologie per nascondersi alla vista di tutti", tr: "Açıkta kendini gizlemek için teknolojiler", ta: "பொதுவாக மறைக்க தெரியும் தொழில்நுட்பங்கள்", te: "ప్రకటనలో నిజాయితీకరించడానికి సాధనాలు", ko: "눈에 띄지 않게 자신을 숨기는 기술", vi: "Công nghệ để ẩn mình trong tầm nhìn", pl: "Technologie, aby schować się na widoku", ro: "Tehnologii pentru a te ascunde în plină vedere", nl: "Technologieën om jezelf in het zicht te verbergen", el: "Τεχνολογίες για να κρυφτείτε στην απλή όψη", th: "เทคโนโลยีในการซ่อนตัวในที่สาธารณะ", cs: "Technologie, jak se skrýt na očích", hu: "Technológiák, hogy elrejtsd magad a szem elől", sv: "Tekniker för att gömma sig i vanlig syn", da: "Teknologier for at skjule dig selv i almindelig syn", })}
         </div>
         <div className="h-4 shrink-0" />
-        <div className="flex flex-col w-full max-w-6xl m-auto">
-          <div className="font-medium text-6xl">
-            Brume
-          </div>
-          <div className="h-2 shrink-0" />
-          <div className="text-default-contrast text-2xl">
-            {Lang.match({ en: "Technologies to hide yourself in plain sight", zh: "在明处隐藏自己的技术", hi: "सामने छुपने के लिए तकनीक", es: "Tecnologías para esconderse a plena vista", ar: "تقنيات لإخفاء نفسك في الوضوح", fr: "Technologies pour vous cacher à la vue de tous", de: "Technologien, um sich offen zu verstecken", ru: "Технологии, чтобы скрыться на виду", pt: "Tecnologias para se esconder à vista de todos", ja: "目立たないように自分を隠すための技術", pa: "ਸਾਫ ਦਿਖਾਈ ਵਿੱਚ ਆਪਣੇ ਆਪ ਨੂੰ ਛੁਪਾਉਣ ਲਈ ਤਕਨੀਕ", bn: "প্রকাশে নিজেকে লুকানোর প্রযুক্তি", id: "Teknologi untuk menyembunyikan diri di depan umum", ur: "صاف دکھائی میں خود کو چھپانے کی تکنیک", ms: "Teknologi untuk menyembunyikan diri di tempat terang", it: "Tecnologie per nascondersi alla vista di tutti", tr: "Açıkta kendini gizlemek için teknolojiler", ta: "பொதுவாக மறைக்க தெரியும் தொழில்நுட்பங்கள்", te: "ప్రకటనలో నిజాయితీకరించడానికి సాధనాలు", ko: "눈에 띄지 않게 자신을 숨기는 기술", vi: "Công nghệ để ẩn mình trong tầm nhìn", pl: "Technologie, aby schować się na widoku", ro: "Tehnologii pentru a te ascunde în plină vedere", nl: "Technologieën om jezelf in het zicht te verbergen", el: "Τεχνολογίες για να κρυφτείτε στην απλή όψη", th: "เทคโนโลยีในการซ่อนตัวในที่สาธารณะ", cs: "Technologie, jak se skrýt na očích", hu: "Technológiák, hogy elrejtsd magad a szem elől", sv: "Tekniker för att gömma sig i vanlig syn", da: "Teknologier for at skjule dig selv i almindelig syn", })}
-          </div>
-          <div className="h-4 shrink-0" />
-          <div className="flex flex-wrap gap-2">
-            <AnchorChip
-              onClick={apps.onClick}
-              onKeyDown={apps.onKeyDown}
-              href={apps.url.hash}
-              rel="noreferrer"
-              target="_blank"
-              dir="ltr">
-              {Lang.match({ en: "Apps", zh: "应用程序", hi: "ऐप्स", es: "Aplicaciones", ar: "تطبيقات", fr: "Applications", de: "Apps", ru: "Приложения", pt: "Aplicativos", ja: "アプリ", pa: "ਐਪਸ", bn: "অ্যাপস", id: "Aplikasi", ur: "ایپس", ms: "Aplikasi", it: "App", tr: "Uygulamalar", ta: "செயலிகள்", te: "యాప్స్", ko: "앱", vi: "Ứng dụng", pl: "Aplikacje", ro: "Aplicații", nl: "Apps", el: "Εφαρμογές", th: "แอปพลิเคชัน", cs: "Aplikace", hu: "Alkalmazások", sv: "Appar", da: "Apps" })}
-            </AnchorChip>
-            <AnchorChip
-              onClick={tokens.onClick}
-              onKeyDown={tokens.onKeyDown}
-              href={tokens.url.hash}
-              rel="noreferrer"
-              target="_blank"
-              dir="ltr">
-              {Lang.match({ en: "Tokens", zh: "代币", hi: "टोकन", es: "Tokens", ar: "رموز", fr: "Jetons", de: "Token", ru: "Токены", pt: "Tokens", ja: "トークン", pa: "ਟੋਕਨ", bn: "টোকেন", id: "Token", ur: "ٹوکن", ms: "Token", it: "Token", tr: "Jetonlar", ta: "டோக்கன்கள்", te: "టోకెన్లు", ko: "토큰", vi: "Mã thông báo", pl: "Tokeny", ro: "Jetoane", nl: "Tokens", el: "Διακριτικά", th: "โทเค็น", cs: "Tokeny", hu: "Tokenek", sv: "Tokens", da: "Tokens" })}
-            </AnchorChip>
-            <AnchorChip
-              onClick={socials.onClick}
-              onKeyDown={socials.onKeyDown}
-              href={socials.url.hash}
-              rel="noreferrer"
-              target="_blank"
-              dir="ltr">
-              {Lang.match({ en: "Socials", zh: "社交", hi: "सोशल्स", es: "Redes sociales", ar: "وسائل التواصل الاجتماعي", fr: "Réseaux sociaux", de: "Soziale Netzwerke", ru: "Социальные сети", pt: "Redes sociais", ja: "ソーシャルメディア", pa: "ਸੋਸ਼ਲਜ਼", bn: "সামাজিক মাধ্যম", id: "Media sosial", ur: "سوشل میڈیا", ms: "Media sosial", it: "Social media", tr: "Sosyal medya", ta: "சமூக ஊடகம்", te: "సోషల్ మీడియా", ko: "소셜 미디어", vi: "Mạng xã hội", pl: "Media społecznościowe", ro: "Rețele sociale", nl: "Sociale media", el: "Κοινωνικά δίκτυα", th: "โซเชียลมีเดีย", cs: "Sociální sítě", hu: "Közösségi média", sv: "Sociala medier", da: "Sociale medier" })}
-            </AnchorChip>
-            <AnchorChip
-              href="https://github.com/brume256"
-              rel="noreferrer"
-              target="_blank"
-              dir="ltr">
-              GitHub
-            </AnchorChip>
-          </div>
+        <div className="flex flex-wrap gap-2">
+          <AnchorChip
+            onClick={apps.onClick}
+            onKeyDown={apps.onKeyDown}
+            href={apps.url.hash}
+            rel="noreferrer"
+            target="_blank"
+            dir="ltr">
+            {Lang.match({ en: "Apps", zh: "应用程序", hi: "ऐप्स", es: "Aplicaciones", ar: "تطبيقات", fr: "Applications", de: "Apps", ru: "Приложения", pt: "Aplicativos", ja: "アプリ", pa: "ਐਪਸ", bn: "অ্যাপস", id: "Aplikasi", ur: "ایپس", ms: "Aplikasi", it: "App", tr: "Uygulamalar", ta: "செயலிகள்", te: "యాప్స్", ko: "앱", vi: "Ứng dụng", pl: "Aplikacje", ro: "Aplicații", nl: "Apps", el: "Εφαρμογές", th: "แอปพลิเคชัน", cs: "Aplikace", hu: "Alkalmazások", sv: "Appar", da: "Apps" })}
+          </AnchorChip>
+          <AnchorChip
+            onClick={socials.onClick}
+            onKeyDown={socials.onKeyDown}
+            href={socials.url.hash}
+            rel="noreferrer"
+            target="_blank"
+            dir="ltr">
+            {Lang.match({ en: "Socials", zh: "社交", hi: "सोशल्स", es: "Redes sociales", ar: "وسائل التواصل الاجتماعي", fr: "Réseaux sociaux", de: "Soziale Netzwerke", ru: "Социальные сети", pt: "Redes sociais", ja: "ソーシャルメディア", pa: "ਸੋਸ਼ਲਜ਼", bn: "সামাজিক মাধ্যম", id: "Media sosial", ur: "سوشل میڈیا", ms: "Media sosial", it: "Social media", tr: "Sosyal medya", ta: "சமூக ஊடகம்", te: "సోషల్ మీడియా", ko: "소셜 미디어", vi: "Mạng xã hội", pl: "Media społecznościowe", ro: "Rețele sociale", nl: "Sociale media", el: "Κοινωνικά δίκτυα", th: "โซเชียลมีเดีย", cs: "Sociální sítě", hu: "Közösségi média", sv: "Sociala medier", da: "Sociale medier" })}
+          </AnchorChip>
+          <AnchorChip
+            onClick={tokens.onClick}
+            onKeyDown={tokens.onKeyDown}
+            href={tokens.url.hash}
+            rel="noreferrer"
+            target="_blank"
+            dir="ltr">
+            {Lang.match({ en: "Tokens", zh: "代币", hi: "टोकन", es: "Tokens", ar: "رموز", fr: "Jetons", de: "Token", ru: "Токены", pt: "Tokens", ja: "トークン", pa: "ਟੋਕਨ", bn: "টোকেন", id: "Token", ur: "ٹوکن", ms: "Token", it: "Token", tr: "Jetonlar", ta: "டோக்கன்கள்", te: "టోకెన్లు", ko: "토큰", vi: "Mã thông báo", pl: "Tokeny", ro: "Jetoane", nl: "Tokens", el: "Διακριτικά", th: "โทเค็น", cs: "Tokeny", hu: "Tokenek", sv: "Tokens", da: "Tokens" })}
+          </AnchorChip>
         </div>
       </div>
     </div>
@@ -133,6 +123,10 @@ export function AppsBoard() {
         icon="/favicon.ico"
         title="Brume Click"
         subtitle={Lang.match({ en: "One-click wallet login", zh: "一键钱包登录", hi: "एक-क्लिक वॉलेट लॉगिन", es: "Inicio de sesión en billetera con un clic", ar: "تسجيل الدخول إلى المحفظة بنقرة واحدة", fr: "Connexion au portefeuille en un clic", de: "Ein-Klick-Wallet-Anmeldung", ru: "Вход в кошелек одним кликом", pt: "Login de carteira com um clique", ja: "ワンクリックウォレットログイン", pa: "ਇੱਕ-ਕਲਿੱਕ ਵਾਲਿਟ ਲੌਗਇਨ", bn: "এক-ক্লিক ওয়ালেট লগইন", id: "Login dompet dengan satu klik", ur: "ون کلک والیٹ لاگ ان", ms: "Log masuk dompet dengan satu klik", it: "Accesso al portafoglio con un clic", tr: "Tek tıklamayla cüzdan girişi", ta: "ஒரு கிளிக் வாலெட் லாகின்", te: "ఒక క్లిక్ వాలెట్ లాగిన్", ko: "원클릭 지갑 로그인", vi: "Đăng nhập ví một lần nhấp", pl: "Logowanie do portfela jednym kliknięciem", ro: "Autentificare în portofel cu un clic", nl: "Eenmalige portemonnee-login", el: "Σύνδεση πορτοφολιού με ένα κλικ", th: "เข้าสู่ระบบกระเป๋าเงินด้วยคลิกเดียว", cs: "Přihlášení do peněženky jedním kliknutím", hu: "Egykattintásos pénztárca bejelentkezés", sv: "Enklicks plånboksinloggning", da: "Én-klik-tegnebog login" })} />
+      <AnchorRow disabled
+        icon="/favicon.ico"
+        title="Brume Guard"
+        subtitle={Lang.match({ en: "Transactions protected by AI", zh: "由 AI 保护的交易", hi: "एआई द्वारा सुरक्षित लेनदेन", es: "Transacciones protegidas por IA", ar: "المعاملات المحمية بواسطة الذكاء الاصطناعي", fr: "Transactions protégées par l'IA", de: "Von KI geschützte Transaktionen", ru: "Транзакции, защищенные ИИ", pt: "Transações protegidas por IA", ja: "AI によって保護されたトランザクション", pa: "ਏਆਈ ਦੁਆਰਾ ਸੁਰੱਖਿਅਤ ਲੈਣ-ਦੇਣ", bn: "এআই দ্বারা সুরক্ষিত লেনদেন", id: "Transaksi yang dilindungi oleh AI", ur: "اے آئی کے ذریعے محفوظ شدہ لین دین", ms: "Transaksi yang dilindungi oleh AI", it: "Transazioni protette dall'IA", tr: "Yapay zeka tarafından korunan işlemler", ta: "ஏ.ஐ மூலம் பாதுகாக்கப்பட்ட பரிவர்த்தனைகள்", te: "ఏఐ ద్వారా రక్షించబడిన లావాదేవీలు", ko: "AI로 보호되는 거래", vi: "Giao dịch được bảo vệ bởi AI", pl: "Transakcje chronione przez AI", ro: "Tranzacții protejate de AI", nl: "Transacties beschermd door AI", el: "Συναλλαγές προστατευμένες από AI", th: "ธุรกรรมที่ได้รับการปกป้องโดย AI", cs: "Transakce chráněné AI", hu: "AI által védett tranzakciók", sv: "Transaktioner skyddade av AI", da: "Transaktioner beskyttet af AI" })} />
       <AnchorRow disabled
         icon="/favicon.ico"
         title="Brume Pay"
@@ -202,10 +196,10 @@ export function SocialsBoard() {
         subtitle={Lang.match({ en: "Follow us on X", zh: "在X上关注我们", hi: "हमें X पर फॉलो करें", es: "Síguenos en X", ar: "تابعنا على X", fr: "Suivez-nous sur X", de: "Folgen Sie uns auf X", ru: "Подписывайтесь на нас в X", pt: "Siga-nos no X", ja: "Xでフォローしてください", pa: "ਸਾਨੂੰ X 'ਤੇ ਫਾਲੋ ਕਰੋ", bn: "আমাদের এক্স-এ অনুসরণ করুন", id: "Ikuti kami di X", ur: "ہمیں ایکس پر فالو کریں", ms: "Ikuti kami di X", it: "Seguici su X", tr: "Bizi X'te takip edin", ta: "எங்களை X இல் பின்தொடருங்கள்", te: "మమ్మల్ని X లో ఫాలో చేయండి", ko: "X에서 팔로우하세요", vi: "Theo dõi chúng tôi trên X", pl: "Śledź nas na X", ro: "Urmărește-ne pe X", nl: "Volg ons op X", el: "Ακολουθήστε μας στο Χ", th: "ติดตามเราบน X", cs: "Sledujte nás na X", hu: "Kövess minket az X-en", sv: "Följ oss på X", da: "Følg os på X" })}
         href="https://x.com/brume256" />
       <AnchorRow
-        icon="/assets/discord.svg"
-        title={Lang.match({ en: "Discord server", zh: "Discord服务器", hi: "Discord सर्वर", es: "Servidor de Discord", ar: "خادم Discord", fr: "Serveur Discord", de: "Discord-Server", ru: "Сервер Discord", pt: "Servidor Discord", ja: "Discordサーバー", pa: "Discord ਸਰਵਰ", bn: "ডিসকর্ড সার্ভার", id: "Server Discord", ur: "ڈسکارڈ سرور", ms: "Server Discord", it: "Server Discord", tr: "Discord sunucusu", ta: "Discord சேவையகம்", te: "డిస్కార్డ్ సర్వర్", ko: "디스코드 서버", vi: "Máy chủ Discord", pl: "Serwer Discord", ro: "Serverul Discord", nl: "Discord-server", el: "Διακομιστής Discord", th: "เซิร์ฟเวอร์ Discord", cs: "Server Discord", hu: "Discord szerver", sv: "Discord-server", da: "Discord-server" })}
-        subtitle={Lang.match({ en: "Talk on our Discord server", zh: "在我们的Discord服务器上聊天", hi: "हमारे Discord सर्वर पर बात करें", es: "Habla en nuestro servidor de Discord", ar: "تحدث على خادم Discord الخاص بنا", fr: "Discutez sur notre serveur Discord", de: "Sprechen Sie auf unserem Discord-Server", ru: "Общайтесь на нашем сервере Discord", pt: "Converse em nosso servidor Discord", ja: "私たちのDiscordサーバーで話す", pa: "ਸਾਡੇ Discord ਸਰਵਰ 'ਤੇ ਗੱਲ ਕਰੋ", bn: "আমাদের ডিসকর্ড সার্ভারে কথা বলুন", id: "Bicaralah di server Discord kami", ur: "ہمارے ڈسکارڈ سرور پر بات کریں", ms: "Bercakap di pelayan Discord kami", it: "Parla sul nostro server Discord", tr: "Discord sunucumuzda konuşun", ta: "எங்கள் Discord சேவையகத்தில் பேசுங்கள்", te: "మా డిస్కార్డ్ సర్వర్‌లో మాట్లాడండి", ko: "우리의 Discord 서버에서 이야기하세요", vi: "Nói chuyện trên máy chủ Discord của chúng tôi", pl: "Rozmawiaj na naszym serwerze Discord", ro: "Vorbește pe serverul nostru Discord", nl: "Praat op onze Discord-server", el: "Μιλήστε στον διακομιστή μας στο Discord", th: "พูดคุยบนเซิร์ฟเวอร์ Discord ของเรา", cs: "Mluvte na našem serveru Discord", hu: "Beszélj a mi Discord szerverünkön", sv: "Prata på vår Discord-server", da: "Tal på vores Discord-server" })}
-        href="https://discord.gg/7drcScm8xQ" />
+        icon="/assets/github.svg"
+        title={Lang.match({ en: "GitHub", zh: "GitHub", hi: "GitHub", es: "GitHub", ar: "GitHub", fr: "GitHub", de: "GitHub", ru: "GitHub", pt: "GitHub", ja: "GitHub", pa: "GitHub", bn: "GitHub", id: "GitHub", ur: "GitHub", ms: "GitHub", it: "GitHub", tr: "GitHub", ta: "GitHub", te: "GitHub", ko: "GitHub", vi: "GitHub", pl: "GitHub", ro: "GitHub", nl: "GitHub", el: "GitHub", th: "GitHub", cs: "GitHub", hu: "GitHub", sv: "GitHub", da: "GitHub" })}
+        subtitle={Lang.match({ en: "Our code is on GitHub", zh: "我们的代码在 GitHub 上", hi: "हमारा कोड GitHub पर है", es: "Nuestro código está en GitHub", ar: "رمزنا على GitHub", fr: "Notre code est sur GitHub", de: "Unser Code ist auf GitHub", ru: "Наш код на GitHub", pt: "Nosso código está no GitHub", ja: "私たちのコードは GitHub にあります", pa: "ਸਾਡਾ ਕੋਡ GitHub 'ਤੇ ਹੈ", bn: "আমাদের কোড GitHub-এ আছে", id: "Kode kami ada di GitHub", ur: "ہمارا کوڈ GitHub پر ہے", ms: "Kod kami ada di GitHub", it: "Il nostro codice è su GitHub", tr: "Kodumuz GitHub'da", ta: "எங்கள் குறியீடு GitHub இல் உள்ளது", te: "మా కోడ్ GitHub లో ఉంది", ko: "우리의 코드는 GitHub에 있습니다", vi: "Mã của chúng tôi có trên GitHub", pl: "Nasz kod jest na GitHub", ro: "Codul nostru este pe GitHub", nl: "Onze code staat op GitHub", el: "Ο κώδικάς μας είναι στο GitHub", th: "รหัสของเราบน GitHub", cs: "Náš kód je na GitHub", hu: "A kódunk a GitHubon van", sv: "Vår kod finns på GitHub", da: "Vores kode er på GitHub" })}
+        href="https://github.com/brume256" />
     </div>
   </div>
 }
