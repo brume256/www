@@ -148,8 +148,13 @@ export function TokensBoard() {
     <div className="h-6" />
     <div className="flex flex-col gap-4">
       <AnchorRow
+        disabled
+        icon="/favicon.ico"
+        title="Series A"
+        subtitle="Coming soon" />
+      <AnchorRow
         icon="/assets/uniswap.png"
-        title="Brume (BRUME)"
+        title="Seed"
         subtitle="Uniswap • Ethereum • October 2024"
         href="https://dexscreener.com/ethereum/0xD0EbFe04Adb5Ef449Ec5874e450810501DC53ED5" />
     </div>
@@ -164,20 +169,21 @@ export function TokensBoard() {
     <div className="h-6" />
     <div className="flex flex-col gap-4">
       <AnchorRow
+        deprecated
         icon="/assets/pumpfun.png"
-        title="Brume (BRUME)"
+        title="Just for fun II"
         subtitle="Pumpfun • Solana • October 2026"
         href="https://pump.fun/coin/AJPertGGMDmM75fb6jiB8MPfFu61ouLDtW6UBvf3pump" />
       <AnchorRow
         deprecated
         icon="/assets/pumpfun.png"
-        title="Brume (BRUME)"
+        title="Just for fun"
         subtitle="Pumpfun • Solana • May 2026"
         href="https://pump.fun/coin/ChtH5GxPAWqFXLYuhrqy82viuMxeWBsvJXcCahT7pump" />
       <AnchorRow
         deprecated
         icon="/assets/bags.png"
-        title="Brume (BRUME)"
+        title="Revenge arc"
         subtitle="Bags • Solana • January 2026"
         href="https://bags.fm/BnZnZe7dr59r9PrUZnwdhC9fEkD6UHnsZZur7xkyBAGS" />
     </div>
