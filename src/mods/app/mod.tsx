@@ -183,7 +183,7 @@ export function TokensBoard() {
       <AnchorRow
         deprecated
         icon="/assets/bags.png"
-        title="Revenge arc"
+        title="Revenge Arc"
         subtitle="Bags • Solana • January 2026"
         href="https://bags.fm/BnZnZe7dr59r9PrUZnwdhC9fEkD6UHnsZZur7xkyBAGS" />
     </div>
