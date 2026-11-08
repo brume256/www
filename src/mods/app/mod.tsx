@@ -148,13 +148,13 @@ export function TokensBoard() {
     <div className="h-6" />
     <div className="flex flex-col gap-4">
       <AnchorRow
-        disabled
         icon="/favicon.ico"
-        title="Series A"
-        subtitle="Coming soon" />
+        title="Series A-like"
+        subtitle="Solana • Presale"
+        href="https://presale.brume.tech/" />
       <AnchorRow
         icon="/assets/uniswap.png"
-        title="Seed"
+        title="Seed-like"
         subtitle="Uniswap • Ethereum • October 2024"
         href="https://dexscreener.com/ethereum/0xD0EbFe04Adb5Ef449Ec5874e450810501DC53ED5" />
     </div>
