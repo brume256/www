@@ -150,7 +150,7 @@ export function TokensBoard() {
       <AnchorRow
         icon="/favicon.ico"
         title="Series A-like"
-        subtitle="Solana • Presale"
+        subtitle="Presale • Solana • November 2026"
         href="https://presale.brume.tech/" />
       <AnchorRow
         icon="/assets/uniswap.png"
