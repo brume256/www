@@ -1,8 +1,8 @@
 import { AnchorChip } from "@/libs/anchors/mod.tsx";
-import { Client } from "@/libs/client/mod.tsx";
 import { Lang } from "@/libs/lang/mod.ts";
-import { useAnchorWithCoords, usePathContext } from "@hazae41/chemin";
+import { useLinkWithCoords, usePathContext } from "@hazae41/chemin";
 import { PathBoard } from "@hazae41/modal";
+import { Client } from "@hazae41/react-client-context";
 import React, { Fragment, useEffect, useState } from "react";
 import * as ascii from "./ascii/mod.ts";
 
@@ -19,9 +19,9 @@ async function loop(callback: () => Promise<void>, signal: AbortSignal) {
 export function App() {
   const path = usePathContext().getOrThrow()
 
-  const apps = useAnchorWithCoords(path, "/apps")
-  const tokens = useAnchorWithCoords(path, "/tokens")
-  const socials = useAnchorWithCoords(path, "/socials")
+  const apps = useLinkWithCoords(path, "/apps")
+  const tokens = useLinkWithCoords(path, "/tokens")
+  const socials = useLinkWithCoords(path, "/socials")
 
   const [closed, setClosed] = useState(false)
 
@@ -40,15 +40,15 @@ export function App() {
 
   return <Fragment>
     <Client>
-      {path.url.pathname === "/apps" &&
+      {path.url.pathname === apps.rel.pathname &&
         <PathBoard>
           <AppsBoard />
         </PathBoard>}
-      {path.url.pathname === "/socials" &&
+      {path.url.pathname === socials.rel.pathname &&
         <PathBoard>
           <SocialsBoard />
         </PathBoard>}
-      {path.url.pathname === "/tokens" &&
+      {path.url.pathname === tokens.rel.pathname &&
         <PathBoard>
           <TokensBoard />
         </PathBoard>}
@@ -73,7 +73,7 @@ export function App() {
           <AnchorChip
             onClick={apps.onClick}
             onKeyDown={apps.onKeyDown}
-            href={apps.url.hash}
+            href={apps.abs.hash}
             rel="noreferrer"
             target="_blank"
             dir="ltr">
@@ -82,7 +82,7 @@ export function App() {
           <AnchorChip
             onClick={socials.onClick}
             onKeyDown={socials.onKeyDown}
-            href={socials.url.hash}
+            href={socials.abs.hash}
             rel="noreferrer"
             target="_blank"
             dir="ltr">
@@ -91,7 +91,7 @@ export function App() {
           <AnchorChip
             onClick={tokens.onClick}
             onKeyDown={tokens.onKeyDown}
-            href={tokens.url.hash}
+            href={tokens.abs.hash}
             rel="noreferrer"
             target="_blank"
             dir="ltr">
@@ -126,13 +126,16 @@ export function AppsBoard() {
         href="https://chromewebstore.google.com/detail/brume-click/kjlnlaliaghojddgclpnjelooempnkfm" />
       <AnchorRow disabled
         icon="/favicon.ico"
-        title="Brume Guard"
-        subtitle={Lang.match({ en: "Transactions protected by AI", zh: "由 AI 保护的交易", hi: "एआई द्वारा सुरक्षित लेनदेन", es: "Transacciones protegidas por IA", ar: "المعاملات المحمية بواسطة الذكاء الاصطناعي", fr: "Transactions protégées par l'IA", de: "Von KI geschützte Transaktionen", ru: "Транзакции, защищенные ИИ", pt: "Transações protegidas por IA", ja: "AI によって保護されたトランザクション", pa: "ਏਆਈ ਦੁਆਰਾ ਸੁਰੱਖਿਅਤ ਲੈਣ-ਦੇਣ", bn: "এআই দ্বারা সুরক্ষিত লেনদেন", id: "Transaksi yang dilindungi oleh AI", ur: "اے آئی کے ذریعے محفوظ شدہ لین دین", ms: "Transaksi yang dilindungi oleh AI", it: "Transazioni protette dall'IA", tr: "Yapay zeka tarafından korunan işlemler", ta: "ஏ.ஐ மூலம் பாதுகாக்கப்பட்ட பரிவர்த்தனைகள்", te: "ఏఐ ద్వారా రక్షించబడిన లావాదేవీలు", ko: "AI로 보호되는 거래", vi: "Giao dịch được bảo vệ bởi AI", pl: "Transakcje chronione przez AI", ro: "Tranzacții protejate de AI", nl: "Transacties beschermd door AI", el: "Συναλλαγές προστατευμένες από AI", th: "ธุรกรรมที่ได้รับการปกป้องโดย AI", cs: "Transakce chráněné AI", hu: "AI által védett tranzakciók", sv: "Transaktioner skyddade av AI", da: "Transaktioner beskyttet af AI" })} />
+        title="Brume Chain"
+        subtitle={Lang.match({ en: "Fast and free blockchain based on cutting-edge web technologies", zh: "基于尖端网络技术的快速免费区块链", hi: "अत्याधुनिक वेब तकनीकों पर आधारित तेज़ और मुफ़्त ब्लॉकचेन", es: "Blockchain rápida y gratuita basada en tecnologías web de vanguardia", ar: "بلوكتشين سريعة ومجانية تعتمد على تقنيات الويب المتطورة", fr: "Blockchain rapide et gratuite basée sur des technologies web de pointe", de: "Schnelle und kostenlose Blockchain basierend auf modernsten Webtechnologien", ru: "Быстрый и бесплатный блокчейн на основе передовых веб-технологий", pt: "Blockchain rápida e gratuita baseada em tecnologias web de ponta", ja: "最先端のウェブ技術に基づく高速で無料のブロックチェーン", pa: "ਅਗੇਤੀ ਵੈੱਬ ਤਕਨੀਕਾਂ 'ਤੇ ਅਧਾਰਿਤ ਤੇਜ਼ ਅਤੇ ਮੁਫ਼ਤ ਬਲਾਕਚੇਨ", bn: "অত্যাধুনিক ওয়েব প্রযুক্তির উপর ভিত্তি করে দ্রুত এবং বিনামূল্যে ব্লকচেইন", id: "Blockchain cepat dan gratis berdasarkan teknologi web mutakhir", ur: "جدید ترین ویب ٹیکنالوجیز پر مبنی تیز اور مفت بلاک چین", ms: "Blockchain pantas dan percuma berdasarkan teknologi web terkini", it: "Blockchain veloce e gratuita basata su tecnologie web all'avanguardia", tr: "Son teknoloji web teknolojilerine dayalı hızlı ve ücretsiz blockchain", ta: "அதிநவீன வலை தொழில்நுட்பங்களை அடிப்படையாகக் கொண்ட வேகமான மற்றும் இலவச பிளாக்செயின்", te: "అత్యాధునిక వెబ్ సాంకేతికతలపై ఆధారపడిన వేగవంతమైన మరియు ఉచిత బ్లాక్‌చెయిన్", ko: "최첨단 웹 기술을 기반으로 한 빠르고 무료인 블록체인", vi: "Blockchain nhanh và miễn phí dựa trên các công nghệ web tiên tiến", pl: "Szybki i darmowy blockchain oparty na najnowocześniejszych technologiach internetowych", ro: "Blockchain rapid și gratuit bazat pe tehnologii web de ultimă generație", nl: "Snelle en gratis blockchain gebaseerd op geavanceerde webtechnologieën", el: "Γρήγορο και δωρεάν blockchain βασισμένο σε τεχνολογίες ιστού αιχμής", th: "บล็อกเชนที่รวดเร็วและฟรีบนพื้นฐานของเทคโนโลยีเว็บที่ล้ำสมัย", cs: "Rychlý a bezplatný blockchain založený na špičkových webových technologiích", hu: "Gyors és ingyenes blokklánc a legmodernebb webes technológiák alapján", sv: "Snabb och gratis blockchain baserad på banbrytande webbteknologier", da: "Hurtig og gratis blockchain baseret på banebrydende webteknologier" })} />
       <AnchorRow disabled
         icon="/favicon.ico"
         title="Brume Pay"
         subtitle={Lang.match({ en: "Private payments for everyday use", zh: "日常使用的私人支付", hi: "दैनिक उपयोग के लिए निजी भुगतान", es: "Pagos privados para uso diario", ar: "مدفوعات خاصة للاستخدام اليومي", fr: "Paiements privés pour un usage quotidien", de: "Private Zahlungen für den täglichen Gebrauch", ru: "Частные платежи для повседневного использования", pt: "Pagamentos privados para uso diário", ja: "日常使用のためのプライベート支払い", pa: "ਰੋਜ਼ਾਨਾ ਵਰਤੋਂ ਲਈ ਨਿੱਜੀ ਭੁਗਤਾਨ", bn: "দৈনন্দিন ব্যবহারের জন্য ব্যক্তিগত পেমেন্ট", id: "Pembayaran pribadi untuk penggunaan sehari-hari", ur: "روزانہ کے استعمال کے لیے نجی ادائیگیاں", ms: "Pembayaran peribadi untuk kegunaan harian", it: "Pagamenti privati per l'uso quotidiano", tr: "Günlük kullanım için özel ödemeler", ta: "தினசரி பயன்பாட்டிற்கான தனிப்பட்ட பணப்பரிவர்த்தனைகள்", te: "రోజువారీ ఉపయోగానికి ప్రైవేట్ చెల్లింపులు", ko: "일상적인 사용을 위한 개인 결제", vi: "Thanh toán riêng tư cho việc sử dụng hàng ngày", pl: "Prywatne płatności do codziennego użytku", ro: "Plăți private pentru utilizarea zilnică", nl: "Privébetalingen voor dagelijks gebruik", el: "Ιδιωτικές πληρωμές για καθημερινή χρήση", th: "การชำระเงินส่วนตัวสำหรับการใช้งานประจำวัน", cs: "Soukromé platby pro každodenní použití", hu: "Privát fizetések mindennapi használatra", sv: "Privata betalningar för daglig användning", da: "Private betalinger til daglig brug" })} />
-    </div>
+      <AnchorRow disabled
+        icon="/favicon.ico"
+        title="Brume Guard"
+        subtitle={Lang.match({ en: "Transactions protected by AI", zh: "由 AI 保护的交易", hi: "एआई द्वारा सुरक्षित लेनदेन", es: "Transacciones protegidas por IA", ar: "المعاملات المحمية بواسطة الذكاء الاصطناعي", fr: "Transactions protégées par l'IA", de: "Von KI geschützte Transaktionen", ru: "Транзакции, защищенные ИИ", pt: "Transações protegidas por IA", ja: "AI によって保護されたトランザクション", pa: "ਏਆਈ ਦੁਆਰਾ ਸੁਰੱਖਿਅਤ ਲੈਣ-ਦੇਣ", bn: "এআই দ্বারা সুরক্ষিত লেনদেন", id: "Transaksi yang dilindungi oleh AI", ur: "اے آئی کے ذریعے محفوظ شدہ لین دین", ms: "Transaksi yang dilindungi oleh AI", it: "Transazioni protette dall'IA", tr: "Yapay zeka tarafından korunan işlemler", ta: "ஏ.ஐ மூலம் பாதுகாக்கப்பட்ட பரிவர்த்தனைகள்", te: "ఏఐ ద్వారా రక్షించబడిన లావాదేవీలు", ko: "AI로 보호되는 거래", vi: "Giao dịch được bảo vệ bởi AI", pl: "Transakcje chronione przez AI", ro: "Tranzacții protejate de AI", nl: "Transacties beschermd door AI", el: "Συναλλαγές προστατευμένες από AI", th: "ธุรกรรมที่ได้รับการปกป้องโดย AI", cs: "Transakce chráněné AI", hu: "AI által védett tranzakciók", sv: "Transaktioner skyddade av AI", da: "Transaktioner beskyttet af AI" })} /> </div>
   </div>
 }
 
