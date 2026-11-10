@@ -16,17 +16,17 @@
     "@hazae41/disposable-stack-polyfill": "^2.0.5",
     "@hazae41/immutable": "^2.1.5",
     "@hazae41/labase": "^1.1.4",
-    "@hazae41/modal": "^1.0.0",
+    "@hazae41/modal": "^1.0.2",
     "@hazae41/react-client-context": "^1.0.2",
     "@hazae41/request-idle-callback-polyfill": "^1.0.0",
-    "@hazae41/rewind": "^2.3.12",
+    "@hazae41/rewind": "^2.3.14",
     "@hazae41/symbol-dispose-polyfill": "^1.1.2",
     "@heroicons/react": "^2.2.0",
-    "react": "^19.3.0",
-    "react-dom": "^19.3.0"
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
   },
   "devDependencies": {
-    "@hazae41/glace": "^1.0.36",
+    "@hazae41/glace": "^1.0.39",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "deno": "^2.9.6"

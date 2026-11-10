@@ -1,7 +1,7 @@
 import { AnchorChip } from "@/libs/anchors/mod.tsx";
 import { Lang } from "@/libs/lang/mod.ts";
 import { useLinkWithCoords, usePathContext } from "@hazae41/chemin";
-import { PathBoard } from "@hazae41/modal";
+import { PathWindow } from "@hazae41/modal";
 import { Client } from "@hazae41/react-client-context";
 import React, { Fragment, useEffect, useState } from "react";
 import * as ascii from "./ascii/mod.ts";
@@ -41,17 +41,17 @@ export function App() {
   return <Fragment>
     <Client>
       {path.url.pathname === apps.rel.pathname &&
-        <PathBoard>
-          <AppsBoard />
-        </PathBoard>}
+        <PathWindow>
+          <AppsWindow />
+        </PathWindow>}
       {path.url.pathname === socials.rel.pathname &&
-        <PathBoard>
-          <SocialsBoard />
-        </PathBoard>}
+        <PathWindow>
+          <SocialsWindow />
+        </PathWindow>}
       {path.url.pathname === tokens.rel.pathname &&
-        <PathBoard>
-          <TokensBoard />
-        </PathBoard>}
+        <PathWindow>
+          <TokensWindow />
+        </PathWindow>}
     </Client>
     <div className="h-full w-full p-safe flex flex-col">
       <div className="grow flex flex-col justify-center items-center py-4">
@@ -103,7 +103,7 @@ export function App() {
   </Fragment>
 }
 
-export function AppsBoard() {
+export function AppsWindow() {
   return <div className="flex flex-col grow p-6">
     <h1 className="text-xl font-medium">
       {Lang.match({ en: "Our apps", zh: "我们的应用", hi: "हमारे ऐप्स", es: "Nuestras aplicaciones", ar: "تطبيقاتنا", fr: "Nos applications", de: "Unsere Apps", ru: "Наши приложения", pt: "Nossos aplicativos", ja: "私たちのアプリ", pa: "ਸਾਡੇ ਐਪਸ", bn: "আমাদের অ্যাপস", id: "Aplikasi Kami", ur: "ہمارے ایپس", ms: "Aplikasi Kami", it: "Le nostre app", tr: "Uygulamalarımız", ta: "எங்கள் செயலிகள்", te: "మా యాప్స్", ko: "우리의 앱들", vi: "Ứng dụng của chúng tôi", pl: "Nasze aplikacje", ro: "Aplicațiile noastre", nl: "Onze apps", el: "Οι εφαρμογές μας", th: "แอปของเรา", cs: "Naše aplikace", hu: "Alkalmazásaink", sv: "Våra appar", da: "Vores apps" })}
@@ -139,7 +139,7 @@ export function AppsBoard() {
   </div>
 }
 
-export function TokensBoard() {
+export function TokensWindow() {
   return <div className="flex flex-col grow p-6">
     <h1 className="text-xl font-medium">
       {Lang.match({ en: "Team-made tokens", zh: "团队制作的代币", hi: "टीम-निर्मित टोकन", es: "Tokens hechos por el equipo", ar: "الرموز التي صنعها الفريق", fr: "Jetons créés par l'équipe", de: "Von Team erstellte Token", ru: "Токены, созданные командой", pt: "Tokens feitos pela equipe", ja: "チーム製トークン", pa: "ਟੀਮ-ਬਣੇ ਟੋਕਨ", bn: "টিম-তৈরি টোকেন", id: "Token buatan tim", ur: "ٹیم کی طرف سے بنائے گئے ٹوکن", ms: "Token buatan tim", it: "Token creati dal team", tr: "Takım yapımı tokenler", ta: "குழு உருவாக்கிய டோக்கன்கள்", te: "టీమ్-తయారు టోకెన్లు", ko: "팀 제작 토큰", vi: "Token do đội tạo ra", pl: "Tokeny stworzone przez zespół", ro: "Tokenuri create de echipă", nl: "Door het team gemaakte tokens", el: "Tokens που δημιουργούνται από την ομάδα", th: "โทเค็นที่สร้างโดยทีมงาน", cs: "Tokeny vytvořené týmem", hu: "Csapat által készített tokenek", sv: "Team-tillverkade tokens", da: "Team-lavede tokens" })}
@@ -193,7 +193,7 @@ export function TokensBoard() {
   </div>
 }
 
-export function SocialsBoard() {
+export function SocialsWindow() {
   return <div className="flex flex-col grow p-6">
     <h1 className="text-xl font-medium">
       {Lang.match({ en: "Join us", zh: "加入我们", hi: "हमसे जुड़ें", es: "Únete a nosotros", ar: "انضم إلينا", fr: "Rejoignez-nous", de: "Schließen Sie sich uns an", ru: "Присоединяйтесь к нам", pt: "Junte-se a nós", ja: "私たちに参加してください", pa: "ਸਾਡੇ ਨਾਲ ਜੁੜੋ", bn: "আমাদের সাথে যোগ দিন", id: "Bergabunglah dengan kami", ur: "ہمارے ساتھ شامل ہوں", ms: "Sertai kami", it: "Unisciti a noi", tr: "Bize katılın", ta: "எங்களைச் சேர்ந்துகொள்ளுங்கள்", te: "మాకు చేరండి", ko: "우리와 함께하세요", vi: "Tham gia với chúng tôi", pl: "Dołącz do nas", ro: "Alăturați-vă nouă", nl: "Doe met ons mee", el: "Ελάτε μαζί μας", th: "เข้าร่วมกับเรา", cs: "Připojte se k nám", hu: "Csatlakozz hozzánk", sv: "Gå med oss", da: "Deltag med os" })}
