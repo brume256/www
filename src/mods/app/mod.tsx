@@ -161,7 +161,7 @@ export function TokensWindow() {
         subtitle="Uniswap • Ethereum • October 2024"
         href="https://dexscreener.com/ethereum/0xD0EbFe04Adb5Ef449Ec5874e450810501DC53ED5" />
     </div>
-    <div className="h-6" />
+    {/* <div className="h-6" />
     <h1 className="text-xl font-medium">
       {Lang.match({ en: "Community-made tokens", zh: "社区制作的代币", hi: "समुदाय-निर्मित टोकन", es: "Tokens hechos por la comunidad", ar: "الرموز التي صنعها المجتمع", fr: "Jetons créés par la communauté", de: "Von der Community erstellte Token", ru: "Токены, созданные сообществом", pt: "Tokens feitos pela comunidade", ja: "コミュニティ製トークン", pa: "ਕਮਿਊਨਿਟੀ-ਬਣੇ ਟੋਕਨ", bn: "কমিউনিটি-তৈরি টোকেন", id: "Token buatan komunitas", ur: "کمیونٹی کی طرف سے بنائے گئے ٹوکن", ms: "Token buatan komunitas", it: "Token creati dalla comunità", tr: "Topluluk yapımı tokenler", ta: "சமூகத்தால் உருவாக்கப்பட்ட டோக்கன்கள்", te: "కమ్యూనిటీ-తయారు టోకెన్లు", ko: "커뮤니티 제작 토큰", vi: "Token do cộng đồng tạo ra", pl: "Tokeny stworzone przez społeczność", ro: "Tokenuri create de comunitate", nl: "Door de gemeenschap gemaakte tokens", el: "Tokens που δημιουργούνται από την κοινότητα", th: "โทเค็นที่สร้างโดยชุมชน", cs: "Tokeny vytvořené komunitou", hu: "Közösség által készített tokenek", sv: "Community-tillverkade tokens", da: "Community-lavede tokens" })}
     </h1>
@@ -189,7 +189,7 @@ export function TokensWindow() {
         title="Revenge Arc"
         subtitle="Bags • Solana • January 2026"
         href="https://bags.fm/BnZnZe7dr59r9PrUZnwdhC9fEkD6UHnsZZur7xkyBAGS" />
-    </div>
+    </div> */}
   </div>
 }
 
