@@ -1,8 +1,8 @@
+import { After } from "@/libs/after/mod.tsx";
 import { AnchorChip } from "@/libs/anchors/mod.tsx";
 import { Lang } from "@/libs/lang/mod.ts";
 import { useLinkWithCoords, usePathContext } from "@hazae41/chemin";
 import { PathWindow } from "@hazae41/modal";
-import { Client } from "@hazae41/react-client-context";
 import React, { Fragment, useEffect, useState } from "react";
 import * as ascii from "./ascii/mod.ts";
 
@@ -39,7 +39,7 @@ export function App() {
   }, [])
 
   return <Fragment>
-    <Client>
+    <After delay={300}>
       {path.url.pathname === apps.rel.pathname &&
         <PathWindow>
           <AppsWindow />
@@ -52,7 +52,7 @@ export function App() {
         <PathWindow>
           <TokensWindow />
         </PathWindow>}
-    </Client>
+    </After>
     <div className="h-full w-full p-safe flex flex-col">
       <div className="grow flex flex-col justify-center items-center py-4">
         <div className="text-default-contrast whitespace-pre-wrap font-[monospace] text-[min(1svw,1svh)] leading-[min(1svw,1svh)]"
@@ -224,12 +224,11 @@ export function SocialsWindow() {
   </div>
 }
 
-export function AnchorRow(props: { title: string } & { subtitle: string } & { icon: string } & { href?: string } & { disabled?: boolean } & { deprecated?: boolean }) {
-  const { title, subtitle, icon, href, disabled, deprecated } = props
+export function AnchorRow(props: { title: string } & { subtitle: string } & { icon: string } & { href?: string } & { disabled?: boolean }) {
+  const { title, subtitle, icon, href, disabled } = props
 
-  return <a className="p-6 bg-default-contrast rounded-xl flex items-center gap-4 aria-disabled:opacity-50 data-deprecated:opacity-50 not-aria-disabled:hover:bg-default-double-contrast focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-default-contrast transition-transform"
-    aria-disabled={disabled}
-    data-deprecated={deprecated}
+  return <a className="p-6 bg-default-contrast rounded-xl flex items-center gap-4 hover:bg-default-double-contrast focus-visible:outline-none focus-visible:bg-default-double-contrast inert:opacity-50"
+    inert={disabled}
     href={href}
     rel="noreferrer"
     target="_blank">
